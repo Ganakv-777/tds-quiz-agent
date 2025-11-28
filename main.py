@@ -7,7 +7,13 @@ from dotenv import load_dotenv
 import uvicorn
 import os
 import time
+import os
+from google import genai
+from google.genai import types
 
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+client = genai.Client(api_key=GEMINI_API_KEY)
 load_dotenv()
 
 EMAIL = os.getenv("EMAIL") 
